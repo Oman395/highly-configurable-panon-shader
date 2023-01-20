@@ -2,6 +2,11 @@
 I've been using panon for a while, and I've never really been happy with how the default shaders work. Not enough customization-- and the biggest thing, a complete lack of smoothing.
 ## To that end, I present, the
 # Highly Configurable Panon Shader
+
+
+https://user-images.githubusercontent.com/77183348/213772969-e887595a-e1ed-4c05-a652-408b2eaba582.mp4
+
+
 Featuring configurable smoothing, bars, colors, and damn near everything else!
 ## Customization
 ### Bars
