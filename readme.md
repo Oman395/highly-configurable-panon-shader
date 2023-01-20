@@ -8,6 +8,8 @@ https://user-images.githubusercontent.com/77183348/213772969-e887595a-e1ed-4c05-
 
 
 Featuring configurable smoothing, bars, colors, and damn near everything else!
+## Installation
+Clone the repository into ~/.local/share/panon/{folder name here}. That's it.
 ## Customization
 ### Bars
 HCPS features several bespoke features for bars. The only thing it lacks is circles; however, there are several fantastic shaders for that, and quite honestly the math makes my head hurt.
