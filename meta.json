@@ -1,0 +1,87 @@
+{
+  "arguments": [
+    {
+      "name": "bar_width",
+      "default": 30,
+      "type": "float",
+      "min": 1
+    },
+    {
+      "name": "bar_gap",
+      "default": 10,
+      "type": "float",
+      "min": 0
+    },
+    {
+      "name": "smooth_mode",
+      "default": 2,
+      "type": "int",
+      "min": 0
+    },
+    {
+      "name": "smooth_amount",
+      "default": 0.9,
+      "type": "float",
+      "min": 0
+    },
+    {
+      "name": "bar_vertical_section_gap",
+      "default": 0,
+      "type": "float",
+      "min": 0
+    },
+    {
+      "name": "bar_vertical_section_height",
+      "default": 1,
+      "type": "float",
+      "min": 1
+    },
+    {
+      "name": "bar_snap_vertical_sections",
+      "default": true,
+      "type": "bool"
+    },
+    {
+      "name": "default_colors",
+      "default": true,
+      "type": "bool"
+    },
+    {
+      "name": "colors_in_block",
+      "default": false,
+      "type": "bool"
+    },
+    {
+      "name": "color_from_y",
+      "default": false,
+      "type": "bool"
+    },
+    {
+      "name": "start_at_middle",
+      "default": false,
+      "type": "bool"
+    },
+    {
+      "name": "round_ends",
+      "default": false,
+      "type": "bool"
+    },
+    {
+      "name": "use_minimum",
+      "default": true,
+      "type": "bool"
+    },
+    {
+      "name": "minimum",
+      "default": 10,
+      "type": "float",
+      "min": -1
+    },
+    {
+      "name": "threshold",
+      "default": 0.01,
+      "type": "float",
+      "min": 0
+    }
+  ]
+}
