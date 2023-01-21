@@ -25,8 +25,10 @@
 // Minimum height, in px
 // If negative, set to radius
 #define MINIMUM $minimum
-// If the value goes below this, then USE_MINIMUM is overrided
+// Below this, set to 0
 #define THRESHOLD $threshold
+// If the value goes below this, then USE_MINIMUM is overrided
+#define https://github.com/Oman395/highly-configurable-panon-shaderTHRESHOLD $threshold
 
 // These are the alternative to USER_COLORS, each one is an rgba color (0-255) that the bar colors will cycle through
 const vec4 colors[] = vec4[](
@@ -51,8 +53,8 @@ vec4 mean(float _from,float _to) {
         v+=texelFetch(iChannel2,ivec2(_to,0),0)* fract(_to);
     else
         v-=texelFetch(iChannel2,ivec2(_to,0),0)*(1.0- fract(_to));
-
-    return v/(_to-_from);
+    if(_to-_from != 0.0) return v/(_to-_from);
+    else return vec4(0);
 }
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
@@ -81,6 +83,10 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
     }
     // Mask
     float heightSound = mean(floored, floored + total).r;
+    if(heightSound < THRESHOLD) {
+      fragColor = vec4(0);
+      return;
+    };
     if(heightSound > 1.0 - radius && ROUND_ENDS) heightSound = 1.0 - radius;
     if(USE_MINIMUM && heightSound < minimum) heightSound = minimum;
     if(heightSound < uv.y) {
